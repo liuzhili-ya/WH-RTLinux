@@ -1,0 +1,33 @@
+1   Flash image:
+    1)  In Linux, connect the programming cable of the board to the host machine.
+    2)  Please navigate to the directory fastboot-linux/rockchip/tools and execute "./rk_flash set". Then select 
+        'TB-RK3588X0' from the options.
+    3)  Execute "./rk_flash env" to view the path showed by "out path".
+    4)  Please place all the image files to be flashed under the directory "out path".
+    5)  Enter the flashing mode using the following method:
+        Method 1: loader mode: Power on the board-->Press and hold the 'Recovery' button-->Click the 'Reset' button
+        once-->Release the 'Recovery' button after the board enters the loader mode.
+        Method 2: maskrom mode. Power on the board-->Press and hold the 'Maskrom' button-->Click the 'Reset' button
+        once-->Release the 'Maskrom' button after the board enters the maskrom mode.
+    6)  Execute "./rk_flash flash -a" to flash all the images to the board. Alternatively, you can execute 
+        "./rk_flash flash -h" to view more commands, allowing you to flash the images individually.
+2   Boot fastboot-os:
+    1) Connect the uart of the board to your host machine and set the baud rate to 1500000, 8 bits, no flow control.
+    2) After the board restarts, you will see the boot time and the login prompt. Enter the root account and the
+       password "wanghuo" to login the system.
+
+
+1   烧写镜像:
+    1)  在Linux下，连接板卡的烧写线到主机，
+    2)  进入工具目录fastboot-linux/rockchip/tools，执行./rk_flash set，选择'TB-RK3588X0'。
+    3)  执行./rk_flash env，查看out path的路径。
+    4)  将所有的待烧写镜像，放置在out path下。
+    5)  通过以下方式进入烧写模式：
+        方式一：loader烧写模式：开发板上电-->按住主板的Recovery键不放-->点击一下Reset键-->当开发板进入loader模式
+        后松开Recovery键。
+        方式二：maskrom烧写模式：开发板上电-->按住主板的Maskrom键不放-->点击一下Reset键-->当开发板进入maskrom模式
+        后松开Maskrom键。
+    6)  执行./rk_flash flash -a即可烧写所有镜像到板卡。也可以执行./rk_flash flash -h查看更多命令，可以逐个烧写镜像。
+2   启动秒启动系统:
+    1)  连接板卡的串口线到主机，设置波特率为1500000，8bit，无流控。
+    2)  板卡启动后，输入账户root，密码wanghuo，即可登入系统。

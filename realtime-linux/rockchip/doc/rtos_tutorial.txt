@@ -1,0 +1,45 @@
+1   Driver installation:
+    In Windows, double-click on realtime-linux\rockchip\tools\FlashTool_EN\Windows\DriverAssitant\DriverInstall.exe to
+    open the installation program, click on the "Driver Installation" button, and follow the prompts to install the USB
+    driver. If you have already installed an older version of the flashing tool, click on the "Driver Uninstall" button
+    to uninstall the driver first, and then click on the "Driver Installation" button to install the driver.
+2   Flash image:
+    1) In Windows, connect the programming cable of the board to the host machine.
+    2) Double-click on realtime-linux\rockchip\tools\RKDevTool_Release_v2.84-EN\RKDevTool.exe, and then access the 
+       "Upgrade Firmware" panel.
+    3) Connect the flashing cable of the board to the Windows host, and then enter the flashing mode using the following
+       method:
+       Method 1: loader mode: Power on the board-->Press and hold the 'Recovery' button-->Click the 'Reset' button once
+       -->Release the 'Recovery' button after the board enters the loader mode.
+       Method 2: maskrom mode. Power on the board-->Press and hold the 'Maskrom' button-->Click the 'Reset' button once
+       -->Release the 'Maskrom' button after the board enters the maskrom mode.
+    4) Click the "Firmware" button on the "Upgrade Firmware" panel, select realtime-linux/rockchip/images/update.img to 
+       flash. Make sure that the board is in the flashing mode (loader mode or maskrom mode) at this time.
+    5) Click the "Upgrade" button on the "Upgrade Firmware" page to start the flashing process.
+3   Boot rt-os:
+    1) Connect the uart of the board to your host machine and set the baud rate to 1500000, 8 bits, no flow control.
+    2) After the board restarts, enter the root account and the password "wanghuo" to login the system.
+    3) Execute 'hackbench -l10000000 &' and './cyclictest -a7 -i1000 -n -p90 -d0 --latency=0 --policy=fifo -D 30m' to test
+       real-time performance.
+
+
+1   安装驱动:
+    在Windows下，双击realtime-linux\rockchip\tools\FlashTool_CN\Windows\DriverAssitant\DriverInstall.exe打开安装程序，
+    点击“驱动安装”按钮，按提示安装USB驱动。如果已经安装旧版本的烧写工具，先点“驱动卸载”按钮卸载驱动，然后点击“驱动安装”
+    按钮安装驱动。
+2   烧写镜像:
+    1)  在Windows下，连接板卡的烧写线到主机。
+    2)  双击realtime-linux\rockchip\tools\RKDevTool_Release_v2.84-CN\RKDevTool_Release_v2.84-CN\RKDevTool.exe，进入“升级
+        固件”页面。
+    3)  将板卡的烧写线接入windows主机，然后通过以下方式进入烧写模式：
+        方式一：loader烧写模式：开发板上电-->按住主板的Recovery键不放-->点击一下Reset键-->当开发板进入loader模式后松开
+        Recovery键。
+        方式二：maskrom烧写模式：开发板上电-->按住主板的Maskrom键不放-->点击一下Reset键-->当开发板进入maskrom模式后松开
+        Maskrom键。
+    4)  点击“升级固件”页面中的“固件”按钮，选择待烧写的镜像realtime-linux/rockchip/images/update.img，确保此时板卡处于烧写
+        模式（loader模式或者maskrom模式）。
+    5)  点击“升级固件”页面中的“升级”按钮进行烧写。
+3   启动实时系统:
+    1)  连接板卡的串口线到主机，设置波特率为1500000，8bit，无流控。
+    2)  板卡启动后，输入账户root，密码wanghuo，即可登入系统。
+    3)  执行'hackbench -l10000000 &'和'./cyclictest -a7 -i1000 -n -p90 -d0 --latency=0 --policy=fifo -D 30m'测试实时性。
