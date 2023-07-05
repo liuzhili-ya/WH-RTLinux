@@ -1,5 +1,4 @@
 ## 1. 项目介绍
-## 1.hello
 - 望获实时Linux系统是基于开源Linux深度优化的硬实时Linux版本，可以支持工业控制、汽车电子等对实时性有高要求的应用场景。
 - 望获实时Linux系统旨在维护一个硬实时Linux版本，在已适配硬件上获得高于现有Linux版本的实时性。
 - 了解更多望获实时Linux系统的信息，请访问[https://www.onewos.com/](https://www.onewos.com/)
